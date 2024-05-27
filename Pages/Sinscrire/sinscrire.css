@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body */
+body {
+  background-color: var(white);
+  color: var(--color-text);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel-caption {
+  text-align: center;
+  color: #090909;
+  font-size: 19px;
+  margin-top: 1%;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+}
+
+.carousel-item {
+  display: none;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+.logo img {
+  display: block;
+  margin: 0 auto;
+  width: 130px;
+  margin-top: 20px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  
+ 
+}
+
+.form-box {
+  width: 50%;
+  height: auto;
+  
+
+}
+.form-back{
+ width: 85%;
+ height: 60%;
+ margin-bottom: 5%;
+ margin-left: 10%;
+ height: 400px;
+  overflow-y: auto;
+}
+
+.form-group {
+  margin-top: 1%;
+  justify-content: center;
+
+  
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  width: 60%;
+  padding: 2%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.boutton {
+  width: 60%;
+  background-color: #FD6601;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  font-size: large;
+  border-radius: 5px;
+  padding: 2%;
+  margin-top: 4%;
+  cursor: pointer;
+}
+
+.image-box {
+  width: calc(50% - 20px);
+  
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top:8% ;
+}
+.lien{
+  margin-top: 2%;
+}
+.lien a {
+  color: #FD6601;
+  text-decoration: none;
+ 
+}
+
+.lien a:hover {
+  text-decoration: underline;
+}
+
+input:focus, button:focus {
+  outline: none;
+}

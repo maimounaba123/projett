@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Rendez-vous</title>
+    <link rel="stylesheet" href="./payer.css">
+</head>
+<body>
+    <nav id="navigation">
+        <a href="../acceuil/acceuil.html" class="logo"><img src="../acceuil/img/Vector.png" style="width: 20%;height: 25%;">  Service<b>Car</b>Link</a>
+        <ul class="links">
+          <li><a href="../acceuil/acceuil.html">Acceuil</a></li>
+          <li><a href="../services/services.html">Nos services</a> </li>
+          <li><a href="../Contact/contact.html">Description</a></li>
+          
+          <li class="dropdown"><a href="../profil/profil.php" class="trigger-drop">Profil<i class="arrow"></i></a>
+            <ul class="drop">
+              <li><a href="../profil/profil.php">Informations personnelles</a></li>
+              <li><a href="#">Se Deconnecter</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    <div class="title-container">
+        <h3>Paiement</h3>
+    </div>
+    <div class="form-container">
+        <form id="appointmentForm" action="process_appointment.php" method="post">
+            <div class="left-section">
+                <label for="matricule">Modéle:</label>
+                <input type="text" id="matricule" name="matricule" required>
+                <label for="model">Marque:</label>
+                <input type="text" id="model" name="model" required>
+        
+                <label for="price">Prix:</label>
+                <input type="text" id="price" name="price" required>
+        
+                <label for="name">Nom & Prénom:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="address">Adresse:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+        
+            <div class="right-section">
+                <label for="paymentType">Mode de paiement:</label>
+                <select id="paymentType" name="paymentType" required onchange="toggleSubtypeOptions()">
+                    <option value="">Sélectionnez le type</option>
+                    <option value="mobile_money">Mobile Money</option>
+                    <option value="virement_bancaire">Virement Bancaire</option>
+                    <option value="cheque">Chèque</option>
+                </select>
+        
+                <div id="subtypeZone" style="display: none;">
+                    <label for="paymentSubtype">Numéro Carte:</label>
+                    <select id="paymentSubtype" name="paymentSubtype">
+                        <option value="">Sélectionnez le sous-type</option>
+                    </select>
+                </div>
+        
+                <div id="chequeNumberZone" style="display: none;">
+                    <label for="chequeNumber">Numéro du chèque:</label>
+                    <input type="text" id="chequeNumber" name="chequeNumber">
+                </div>
+        
+                <label for="color">Couleur de la voiture:</label>
+                <select id="color" name="color" required>
+                    <option value="">Sélectionnez une couleur</option>
+                    <option value="Noir">Noir</option>
+                    <option value="Blanc">Blanc</option>
+                    <option value="Rouge">Rouge</option>
+                    <option value="Bleu">Bleu</option>
+                    <option value="Vert">Vert</option>
+                    <option value="Jaune">Jaune</option>
+                    <option value="Gris">Gris</option>
+                    <option value="Argent">Argent</option>
+                </select>
+        
+                <label for="delivery">Livraison à domicile:</label>
+                <select id="delivery" name="delivery" required onchange="toggleDeliveryFields()">
+                    <option value="">Sélectionnez une option</option>
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                </select>
+        
+                <div id="deliveryFields" style="display: none;">
+                    <label for="deliveryDate">Date de livraison:</label>
+                    <input type="date" id="deliveryDate" name="deliveryDate">
+        
+                    <label for="deliveryTime">Heure de livraison:</label>
+                    <input type="time" id="deliveryTime" name="deliveryTime">
+                </div>
+                <div class="buttons-container">
+                    <button type="reset" class="btn cancel">Annuler</button>
+                    <button type="submit" class="btn confirm">Confirmer</button>
+                </div>
+            </div>
+        </form>
+        
+    </div>
+
+    <script>
+        function toggleSubtypeOptions() {
+            var paymentType = document.getElementById("paymentType").value;
+            var subtypeZone = document.getElementById("subtypeZone");
+            var chequeNumberZone = document.getElementById("chequeNumberZone");
+            var paymentSubtypeSelect = document.getElementById("paymentSubtype");
+
+            while (paymentSubtypeSelect.options.length > 0) {
+                paymentSubtypeSelect.remove(0);
+            }
+
+            if (paymentType === "mobile_money") {
+                subtypeZone.style.display = "block";
+                chequeNumberZone.style.display = "none";
+                var options = ["Orange Money", "Wave", "Wizall"];
+                for (var i = 0; i < options.length; i++) {
+                    var option = document.createElement("option");
+                    option.text = options[i];
+                    paymentSubtypeSelect.add(option);
+                }
+            } else if (paymentType === "virement_bancaire") {
+                subtypeZone.style.display = "block";
+                chequeNumberZone.style.display = "none";
+                var option = document.createElement("option");
+                option.text = "IBAN: 09234758912347482";
+                paymentSubtypeSelect.add(option);
+            } else if (paymentType === "cheque") {
+                subtypeZone.style.display = "none";
+                chequeNumberZone.style.display = "block";
+            } else {
+                subtypeZone.style.display = "none";
+                chequeNumberZone.style.display = "none";
+                var option = document.createElement("option");
+                option.text = "Sélectionnez le sous-type";
+                paymentSubtypeSelect.add(option);
+            }
+        }
+
+        function toggleDeliveryFields() {
+            var delivery = document.getElementById("delivery").value;
+            var deliveryFields = document.getElementById("deliveryFields");
+
+            if (delivery === "oui") {
+                deliveryFields.style.display = "block";
+            } else {
+                deliveryFields.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

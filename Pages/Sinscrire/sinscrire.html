@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S'inscrire</title>
+    <link rel="stylesheet" href="sinscrire.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="logo">
+                    <img src="img/Logo.png" alt="Slide 1">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/illustrasi.png" alt="Slide 2">
+            </div>
+        </div>
+        <div class="carousel-caption">
+            <p class="mb-0">Bienvenue sur ServiceCarLink !</p>
+        </div>
+    </div>
+
+    <div class="carousel-caption">
+        <p class="mb-0" style="margin-top: 20px;">Inscrivez-vous pour accéder à toutes les fonctionnalités de notre plateforme</p>
+    </div>
+    <div class="form-container">
+        <div class="form-box">
+            <form class="form-back" method="post" action="sinscrire.php">
+                <div class="form-group">
+                    <label for="nom" class="form-label">Nom : </label>
+                    <input type="text" class="form-control" id="nom" name="nom">
+                </div>
+                <div class="form-group">
+                    <label for="prenom" class="form-label">Prénom : </label>
+                    <input type="text" class="form-control" id="prenom" name="prenom">
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-label">Email : </label>
+                    <input type="email" class="form-control" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="motdepasse" class="form-label">Mot de passe : </label>
+                    <input type="password" class="form-control" id="motdepasse" name="motdepasse">
+                </div>
+                <div class="form-group">
+                    <label for="confirmermotdepasse" class="form-label">Confirmer le mot de passe : </label>
+                    <input type="password" class="form-control" id="confirmermotdepasse" name="confirmermotdepasse">
+                </div>
+                <div class="form-group">
+                    <label for="region" class="form-label">Département : </label>
+                    <input type="text" class="form-control" id="region" name="region">
+                </div>
+                <div class="form-group">
+                    <label for="telephone" class="form-label">Téléphone : </label>
+                    <input type="text" class="form-control" id="telephone" name="telephone">
+                </div>
+                <div class="form-group">
+                    <label for="adresse" class="form-label">Adresse : </label>
+                    <input type="text" class="form-control" id="adresse" name="adresse">
+                </div>
+                <button type="submit" class="boutton">Continuer</button>
+            </form>
+            
+        </div>
+        <div class="col-md-6 mt-3 image-container">
+            <img src="img/undraw_fast_car_p-4-cu 1.svg" class="d-block h-10" alt="Image à droite">
+        </div>
+    </div>
+</div>
+</body>
+</html>

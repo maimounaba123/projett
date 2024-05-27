@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      
+    <title>Acceuil</title>
+    <link rel="stylesheet" type="text/css" target="_blank" href="acceuil.css" />
+  </head>
+  <body>
+    <nav id="navigation">
+      <a href="../acceuil/acceuil.html" class="logo"><img src="img/Vector.png" style="width: 20%;height: 25%;">  Service<b>Car</b>Link</a>
+      <ul class="links">
+        <li><a href="#">Acceuil</a></li>
+        <li><a href="../services/services.html">Nos services</a> </li>
+        <li><a href="../contact/contact.html">Description</a></li>
+        
+        <li class="dropdown"><a href="../profil/profil.php" class="trigger-drop">Profil<i class="arrow"></i></a>
+          <ul class="drop">
+            <li><a href="../profil/profil.php">Informations personnelles</a></li>
+            <li><button onclick=" deconnexion()">Déconnexion</button></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <div class="banner">
+        <img src="img/1.jpg" class="banner-img" alt="Banner">
+      </div>
+    
+      <div class="section marques">
+        <h3 class="section-title">Marques</h3>
+        <img src="img/2.jpg" class="brand-img" alt="Brand">
+      </div>
+    
+      <div class="section about">
+        <h3 class="section-title">A propos</h3>
+        <div class="about-content">
+          <p>
+            ServiceCarLink est une entreprise spécialisée dans la gestion de garages automobiles, 
+            avec pour objectif principal d'optimiser l'efficacité opérationnelle et d'améliorer 
+            la qualité des services offerts aux clients. Cette entreprise offre une gamme complète
+            de solutions et de services destinés à aider les garages automobiles à fonctionner de 
+            manière plus efficace et à fournir un meilleur service à leur clientèle.
+          </p>
+        </div>
+      </div>
+    
+      <div class="section services">
+        <h3 class="section-title">Nos Services</h3>
+        <div class="services-grid">
+          <img src="img/3.jpg" class="service-img" alt="Service 1">  
+        </div>
+        <div class="services-grid">
+        <img src="img/4.jpg" class="service-img" alt="Service 2">
+      </div>
+      </div>
+    
+      <div class="section contacts">
+        <h3 class="section-title">Contacts</h3>
+        <div class="contact-info">
+          <div class="contact-form">
+            <h4>Contactez-nous</h4>
+            <input type="email" class="form-control" id="email" placeholder="Entrez votre email"><br/>
+            <textarea class="form-control" id="message" rows="3" placeholder="Message"></textarea>
+            <button class="button">Envoyer</button>
+          </div>
+          <div class="contact-details">
+            <h4>Achat & Véhicule</h4>
+            <a href="#" class="contact-link">Acheter une voiture</a>
+            <a href="#" class="contact-link">Prendre un rendez-vous</a>
+            <a href="#" class="contact-link">Choisir la voiture qui vous convient</a>
+          </div>
+          <div class="contact-details">
+            <h4>Adresse</h4>
+            <p class="contact-link">Nord Foire VDN</p>
+            <p class="contact-link">Boite Postale : 3456FD</p> 
+            <p class="contact-link">Téléphone : (+221) 33 869 04 12</p>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer-content">
+          <p>@ServiceCarLink2024</p>
+          <p>Confidentialité</p>
+          <p>Conditions d'utilisations</p>
+          <p>Tous les droits nous sont réservés</p>
+         
+        </div>
+      </footer>
+      
+      <script>
+        // Fonction pour se déconnecter
+        function deconnexion() {
+              window.location.href = "acceuil.html";
+                // Redirigez vers la page de connexion ou effectuez d'autres actions nécessaires
+            }
+      </script>
+    
+    
+  </body>
+</html>

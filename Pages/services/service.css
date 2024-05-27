@@ -1,0 +1,204 @@
+.acolor{
+  color: FD6601;
+}
+
+  
+/* Variables */
+:root {
+  --color-base: #fff;
+  --color-text: #222;
+  --color-accent: #FD6601;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body */
+body {
+  background-color: var(white);
+  color: var(--color-text);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* Navigation */
+#navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5%;
+  background-color: var(--color-text);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 100%;
+  text-decoration: none;
+  color: var(--color-base);
+}
+
+.links {
+  list-style-type: none;
+  display: flex;
+}
+
+.links li {
+  margin-left: 20px;
+}
+
+.links li a {
+  text-decoration: none;
+  color: var(--color-base);
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+.links li a:hover {
+  background-color: var(--color-accent);
+  color: var(--color-base);
+}
+
+/* Dropdown */
+.drop {
+  display: none;
+  position: absolute;
+  background-color: var(--color-base);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown:hover .drop {
+  display: block;
+}
+
+.drop li a {
+  display: block;
+  padding: 10px 15px;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.drop li a:hover {
+  background-color: var(--color-accent);
+  color: var(--color-base);
+}
+
+/* Arrow */
+.arrow {
+  position: relative;
+  top: 3px;
+  margin-left: 5px;
+  border: solid var(--color-text);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+}
+
+
+  section {
+    margin-top: 70px;
+  }
+  
+ 
+ 
+  /*--------------------------Monuments-----------------------*/
+  #Monuments {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px 10px;
+  }
+  
+  .mini_title {
+    margin-top: -95px;
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #FD6601;
+  }
+  
+  .title {
+    font-size: 20px;
+    color: #FD6601;
+    margin-bottom: 55px;
+    text-align: center;
+  }
+  
+  .monuments {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .infos p {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .monuments .status {
+    height: 370px;
+    width: 300px;
+    background-color: transparent;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 6px;
+    margin-bottom: 35px;
+    transition: 0.5s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .monuments .status img {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+    transition: all 0.5s linear;
+  }
+  
+  .monuments .status p {
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 10px;
+  }
+  
+  .monuments .status .titre {
+    font-size: 17px;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .monuments .status a {
+    margin-top: 10px;
+    font-size: 17px;
+    width: 120px;
+    height: 50px;
+    padding: 14px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #FD6601;
+    color: #121212;
+    border-radius: 6px;
+    font-weight: bold;
+  }
+  
+  .monuments .status img:hover {
+    width: 130px;
+    height: 130px;
+  }
+  
+ 
+  
+  

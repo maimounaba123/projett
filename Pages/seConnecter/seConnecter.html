@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Se connecter</title>
+        <link rel="stylesheet" type="text/css" target="_blank" href="seConnecter.css" />
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="logo">
+                            <img src="img/Logo.png" alt="Slide 1">
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/illustrasi.png" alt="Slide 2">
+                    </div>
+                </div>
+                <div class="carousel-caption">
+                    <p class="mb-0">Bienvenue sur ServiceCarLink !</p>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <div class="form-box">
+                    <form class="form-back" method="post" action="seConnecter.php"> <!-- Action pointe vers le script PHP -->
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email :</label>
+                            <input type="email" class="form-control" id="email" name="email"> <!-- Ajoutez un attribut "name" -->
+                        </div>
+                        <div class="form-group">
+                            <label for="motdepasse" class="form-label">Mot de passe :</label>
+                            <input type="password" class="form-control" id="motdepasse" name="motdepasse"> <!-- Ajoutez un attribut "name" -->
+                        </div>
+                        <button type="submit" class="boutton" name="submit">Se connecter</button> <!-- Ajoutez un attribut "name" -->
+                        <p class="lien">Avez-vous un compte ? <a href="../Sinscrire/sinscrire.html">S'inscrire</a></p>
+                    </form>
+                </div>
+                <div class="image-box">
+                    <img src="img/illustrasi.png" alt="Image à droite">
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
