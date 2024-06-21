@@ -39,9 +39,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 VALUES ('$nom', '$prenom', '$email', '$motdepasse_hash', '$region', '$telephone', '$adresse')";
 
     if ($connexion->query($requete) === TRUE) {
-        echo json_encode(array("success" => true));
+        header("Location: seConnecter/seConnecter.html");
+        exit();
     } else {
-        echo json_encode(array("success" => false, "message" => "Erreur lors de l'insertion de l'enregistrement : " . $connexion->error));
+        header("Location: Sinscrire/Sinscrire.php");
+        exit();
     }
 }
 

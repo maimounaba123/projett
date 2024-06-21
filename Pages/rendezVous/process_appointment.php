@@ -32,10 +32,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($requete->execute()) {
         // Message de succès
-        echo json_encode(array("status" => "success", "message" => "Rendez-vous enregistré avec succès."));
+        header("Location: rendezVous/rendezVous.html");
+        exit();
     } else {
         // Message d'erreur
-        echo json_encode(array("status" => "error", "message" => "Erreur lors de l'enregistrement du rendez-vous : " . $connexion->error));
+        header("Location: rendezVous/rendezVous.html");
+        exit();
     }
 
     $requete->close();

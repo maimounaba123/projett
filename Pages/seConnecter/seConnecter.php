@@ -36,7 +36,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         header("Location: ../acceuil/acceuil.html"); // Rediriger vers la page protégée
         exit;
     } else {
-        echo "Email ou mot de passe incorrect.";
+        header("Location: seConnecter/seConnecter.html");
+        exit();
     }
 
     $requete->close();

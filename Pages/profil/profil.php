@@ -66,13 +66,15 @@ if(isset($_SESSION['email'])) {
             echo "<p><strong>Téléphone :</strong> " . $row["telephone"] . "</p>";
         }
     } else {
-        echo "Aucun résultat trouvé pour cet email.";
+      header("Location: acceuil/acceuil.html");
+      exit();
     }
 
     // Fermer la connexion
     $connexion->close();
 } else {
-    echo "Utilisateur non connecté.";
+  header("Location: acceuil/acceuil.html");
+  exit();
 }
 ?>
 
